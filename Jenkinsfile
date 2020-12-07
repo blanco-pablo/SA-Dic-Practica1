@@ -4,6 +4,7 @@ pipeline {
         stage('install') {
             steps {
                 dir("Server"){
+                    sh 'cat package.json'
                     sh 'npm install' 
                 }
                 
