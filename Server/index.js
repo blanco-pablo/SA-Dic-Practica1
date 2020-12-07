@@ -18,6 +18,13 @@ app.get('/', function (req, res) {
     //res.render('home');
 });
 
+//Metodo GET TEST
+app.get('/test', function (req, res) {     
+    res.send('hello world');
+    //res.render('home');
+});
+
+
 //Puerto 3000 donde se inicia el server
 app.listen(3000, function () {
     console.log('Cliente en puerto 3000');
