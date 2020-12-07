@@ -1,31 +1,21 @@
-!DOCTYPE html
 html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="style.css")
-        link(href="css/bootstrap.min.css" rel="stylesheet" type="text/css" )
-        link(href="css/flexslider.css" rel="stylesheet" type="text/css" )
-        link(href="css/prettyPhoto.css" rel="stylesheet" type="text/css" )
-        link(href="css/animate.css" rel="stylesheet" type="text/css" media="all")
-        link(href="css/owl.carousel.css" rel="stylesheet")
-        link(href="css/style.css" rel="stylesheet" type="text/css" )
+        link(href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css')
+        link(rel="stylesheet", href="public/css/style.css")
         title Practica 1
-
     body
-        div(class="preloader_hide")
-            div(id="page")
-                header
-                    div(class="menu_block")
-                        dif(class="container clearfix")
-                            dif( class="logo pull-left")
-                                a(href="index.html")
-                                    span(class="b1") WH
-                                    span(class="b3") ITE
-                            div(class="pull-right")
-                                nav(class="navmenu center")
-                                    ul
-                                        li(class="first active scroll_btn")
-                                            a(href="#home" ) Home
-                                        li(class="scroll_btn")
-                                            a(href="#about") About Us
+        div(class="login")
+            div(class="login-header")
+                h1 Login
+            div(class="login-form")
+                h3 Usuario:
+                input(type="text" placeholder="Username")
+                br
+                h3 Password:
+                input(type="password" placeholder="Password")
+                input(type="button" value="Login" class="login-button")
+                br
+                a(class="sign-up") Sign Up!
+  
