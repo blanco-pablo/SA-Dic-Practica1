@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage('Install dependencies') {
+        stage('Install Dependencies') {
             steps {
                 dir("Server"){
                     sh 'npm install'
@@ -9,7 +9,7 @@ pipeline {
                 
             }
         }
-        stage('test') {
+        stage('Test Proyect') {
             steps {
                 dir("Server"){
                     sh 'npm test' 
@@ -20,6 +20,11 @@ pipeline {
         stage('Building image') {
             steps{
                 sh 'docker build -t imagen:latest .' 
+            }
+        }
+        stage('Run image') {
+            steps{
+                sh 'docker run -p 3000:3000 -d imagen:latest' 
             }
         }
     }
