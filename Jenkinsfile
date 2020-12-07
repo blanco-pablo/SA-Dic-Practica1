@@ -1,14 +1,12 @@
 pipeline {
-    agent any
+    agent { lable 'main'}
     stages {
-        stage('Build') { 
+        stage('install') {
             steps {
-                sh 'npm install' 
-            }
-        }
-        stage('RunApp') { 
-            steps {
-                sh 'npm start' 
+                dir("Server"){
+                    sh 'npm install' 
+                }
+                
             }
         }
     }
