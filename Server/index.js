@@ -20,7 +20,7 @@ app.get('/', function (req, res) {
 
 //Puerto 3000 donde se inicia el server
 app.listen(3000, function () {
-    console.log('Cliente en puerto 3000!!!!!!');
+    console.log('Cliente en puerto 3000');
 });
 
 module.exports = app;
