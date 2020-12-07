@@ -1,5 +1,5 @@
 pipeline {
-    agent { lable 'main'}
+    agent { label 'main'}
     stages {
         stage('install') {
             steps {
