@@ -19,9 +19,7 @@ pipeline {
         }
         stage('Building image') {
             steps{
-                script {
-                    dockerImage = docker.build dockerRegistry + ":$BUILD_NUMBER"
-                }
+                sh 'docker build -t imagen:latest .' 
             }
         }
     }
