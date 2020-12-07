@@ -14,14 +14,12 @@ app.use("/public",express.static(path.join(__dirname,'/public')));
 
 //Metodo GET para renderizar el formulario
 app.get('/', function (req, res) {     
-    //res.send('hello world');
     res.render('home');
 });
 
 //Metodo GET TEST
 app.get('/test', function (req, res) {     
-    res.send('hello world');
-    
+    res.send('Server OK');
 });
 
 
