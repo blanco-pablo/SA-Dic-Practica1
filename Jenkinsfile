@@ -19,10 +19,8 @@ pipeline {
         }
         stage('Pre-Build') {
             steps {
-                steps{
-                    sh 'docker stop $(docker ps -aq)'
-                    sh 'docker rm $(docker ps -aq)'
-                }
+                sh 'docker stop $(docker ps -aq)'
+                sh 'docker rm $(docker ps -aq)'
             }
         }
         stage('Building image') {
