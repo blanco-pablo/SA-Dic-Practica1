@@ -4,8 +4,15 @@ pipeline {
         stage('install') {
             steps {
                 dir("Server"){
-                    sh 'cat package.json'
-                    sh 'npm install' 
+                    sh 'npm install'
+                }
+                
+            }
+        }
+        stage('test') {
+            steps {
+                dir("Server"){
+                    sh 'npm test' 
                 }
                 
             }
