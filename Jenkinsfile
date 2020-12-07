@@ -17,12 +17,11 @@ pipeline {
                 
             }
         }
-        stage('Run') {
-            steps {
-                dir("Server"){
-                    sh 'npm start' 
+        stage('Building image') {
+            steps{
+                script {
+                    dockerImage = docker.build dockerRegistry + ":$BUILD_NUMBER"
                 }
-                
             }
         }
     }
