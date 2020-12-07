@@ -19,7 +19,7 @@ app.get('/', function (req, res) {
 
 //Metodo GET TEST
 app.get('/test', function (req, res) {     
-    res.send('Server OK');
+    res.send('TEST');
 });
 
 
