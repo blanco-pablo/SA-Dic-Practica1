@@ -17,5 +17,13 @@ pipeline {
                 
             }
         }
+        stage('Run') {
+            steps {
+                dir("Server"){
+                    sh 'npm start' 
+                }
+                
+            }
+        }
     }
 }
