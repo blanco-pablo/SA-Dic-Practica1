@@ -26,5 +26,10 @@ pipeline {
                 '''                
             }
         }
+        stage('Deploy image') {
+            steps{
+              echo 'PRin'
+            }
+        }
     }
 }
