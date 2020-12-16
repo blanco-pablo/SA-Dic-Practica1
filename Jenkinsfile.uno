@@ -9,6 +9,7 @@ pipeline {
                 
             }
         }
+        
         stage('Test Proyect') {
             steps {
                 dir("Server"){
