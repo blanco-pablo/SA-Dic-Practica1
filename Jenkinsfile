@@ -28,7 +28,12 @@ pipeline {
         }
         stage('Deploy image') {
             steps{
-              echo 'PRin'
+              sh '''
+                cp prueba.pp /etc/puppetlabs/code/environments/production/manifests/
+              '''
+              sh '''
+                
+              '''
             }
         }
     }
