@@ -6,15 +6,13 @@ pipeline {
                 dir("Server"){
                     sh 'npm install'
                 }
-                
             }
         }
         stage('Test Proyect') {
             steps {
                 dir("Server"){
                     sh 'npm test' 
-                }
-                
+                }                
             }
         }
         stage('Building and PUSH image') {
