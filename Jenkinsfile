@@ -30,7 +30,7 @@ pipeline {
         stage('Deploy image') {
             steps{
                 echo 'Deploy'
-                ansiblePlaybook credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'dev.inv', playbook: 'playbook-desarrollo.yml'
+                ansiblePlaybook credentialsId: 'pablo', disableHostKeyChecking: true, installation: 'ansible', inventory: 'dev.inv', playbook: 'playbook-desarrollo.yml'
             }
         }
     }
