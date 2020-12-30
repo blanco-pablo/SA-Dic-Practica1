@@ -1,0 +1,2 @@
+[webservers]
+35.202.56.190 ansible_user=pablo

@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        PRODUCCION_URL = ''
+    }
     stages {
         stage('Install Dependencies') {
             steps {
@@ -26,7 +29,8 @@ pipeline {
         }
         stage('Deploy image') {
             steps{
-                echo 'Prueba'
+                echo 'Deploy'
+                ansiblePlaybook credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'dev.inv', playbook: 'playbook-desarrollo.yml'
             }
         }
     }
